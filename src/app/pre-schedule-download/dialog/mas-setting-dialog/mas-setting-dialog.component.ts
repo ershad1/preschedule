@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mas-setting-dialog.component.css']
 })
 export class MasSettingDialogComponent implements OnInit {
-
+  value = '';
   constructor() { }
 
   ngOnInit() {
