@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sentry-setting-dialog.component.css']
 })
 export class SentrySettingDialogComponent implements OnInit {
+  value = '';
 
   constructor() { }
 

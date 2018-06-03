@@ -1,3 +1,50 @@
-<p>
-  sentry-setting-dialog works!
-</p>
+<h1 matDialogTitle>Sentry API Setting</h1>
+<div>
+  <div fxLayout="column">
+
+    <mat-label>Dispatcher Credentials</mat-label>
+    <mat-form-field>
+      <input matInput placeholder="Username" type="text">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Password" type="password">
+    </mat-form-field>
+
+    <mat-label>Driver Credentials</mat-label>
+    <mat-form-field>
+      <input matInput placeholder="Username" type="text">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Password" type="password">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [matDatepicker]="startDate" placeholder="Start Date">
+      <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
+      <mat-datepicker #startDate></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [matDatepicker]="endDate" placeholder="End Date">
+      <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
+      <mat-datepicker #endDate></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Schedule Expression" type="text">
+    </mat-form-field>
+
+
+    <div fxLayout="row" fxLayoutGap="15px">
+      <mat-label>Status</mat-label>
+      <mat-radio-group fxLayoutGap="10px">
+        <mat-radio-button value="1">Active</mat-radio-button>
+        <mat-radio-button value="2">Inactive</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+
+  <mat-dialog-actions>
+    <button mat-raised-button color="primary" matDialogClose>Close</button>
+    <button mat-raised-button color="primary">Update</button>
+  </mat-dialog-actions>
+
+</div>

@@ -1,36 +1,40 @@
 <h1 matDialogTitle>MAS API Setting</h1>
+<div>
+  <div fxLayout="column">
 
-<mat-dialog-content class="d-flex flex-column">
+    <mat-form-field>
+      <input matInput type="password" placeholder="API Key" [(ngModel)]="value"/>
+      <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [matDatepicker]="startDate" placeholder="Start Date">
+      <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
+      <mat-datepicker #startDate></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [matDatepicker]="endDate" placeholder="End Date">
+      <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
+      <mat-datepicker #endDate></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Schedule Expression" type="text">
+    </mat-form-field>
 
-  <mat-form-field>
-    <input matInput type="password" placeholder="API Key" [(ngModel)]="value"/>
-    <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-      <mat-icon>close</mat-icon>
-    </button>
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput [matDatepicker]="startDate" placeholder="Start Date">
-    <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
-    <mat-datepicker #startDate></mat-datepicker>
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput [matDatepicker]="endDate" placeholder="End Date">
-    <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
-    <mat-datepicker #endDate></mat-datepicker>
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput placeholder="Schedule Expression" type="text">
-  </mat-form-field>
 
-  <mat-label>Status</mat-label>
-  <mat-radio-group>
-    <mat-radio-button value="1">Option 1</mat-radio-button>
-    <mat-radio-button value="2">Option 2</mat-radio-button>
-  </mat-radio-group>
+    <div fxLayout="row" fxLayoutGap="15px">
+      <mat-label>Status</mat-label>
+      <mat-radio-group fxLayoutGap="10px">
+        <mat-radio-button value="1">Active</mat-radio-button>
+        <mat-radio-button value="2">Inactive</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
 
-</mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-raised-button color="primary" matDialogClose>Close</button>
+    <button mat-raised-button color="primary">Update</button>
+  </mat-dialog-actions>
 
-<mat-dialog-actions>
-  <button mat-button matDialogClose>Close</button>
-  <button mat-button>Update</button>
-</mat-dialog-actions>
+</div>

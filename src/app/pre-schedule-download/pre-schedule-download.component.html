@@ -1,26 +1,87 @@
-<div class="container-fluid">
-  <mat-card>
-    <mat-card-header>
-      <p class="mat-title">Mas</p>
-      <p class="mat-body-1">Last Scheduled time</p>
-    </mat-card-header>
-    <mat-card-content>
-      <mat-form-field>
-        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
+<div fxLayoutGap="15px" fxLayout="column"  fxFlex="50">
+    <mat-card class="mat-elevation-z8">
+      <mat-card-header fxLayoutGap="10px" fxLayoutAlign="start center">
+        <p class="mat-title">MAS</p>
+        <p class="mat-body-1">Last Scheduled time</p>
+      </mat-card-header>
+      <mat-card-content>
+
+        <mat-form-field>
+          <input matInput [matDatepicker]="masPicker" placeholder="Choose a date">
+          <mat-datepicker-toggle matSuffix [for]="masPicker"></mat-datepicker-toggle>
+          <mat-datepicker #masPicker></mat-datepicker>
+        </mat-form-field>
 
 
-      <mat-radio-group>
-        <mat-radio-button value="1">Full</mat-radio-button>
-        <mat-radio-button value="2">Update Only</mat-radio-button>
-      </mat-radio-group>
+        <div fxLayout="row" fxLayoutGap="15px">
+          <mat-radio-group fxLayoutGap="15px">
+            <mat-radio-button value="1">Full</mat-radio-button>
+            <mat-radio-button value="2">Update Only</mat-radio-button>
+          </mat-radio-group>
 
-      <button mat-raised-button color="primary">Download Trips</button>
-      <button mat-raised-button color="primary">Schedule History</button>
-      <button mat-raised-button color="primary" (click)="openMasSettingDialog()">Setting</button>
+          <button mat-raised-button color="primary">Download Trips</button>
+          <button mat-raised-button color="primary">Schedule History</button>
+          <button mat-raised-button color="primary" (click)="openMasSettingDialog()">Setting</button>
+        </div>
 
-    </mat-card-content>
-  </mat-card>
+      </mat-card-content>
+    </mat-card>
+
+
+
+    <mat-card class="mat-elevation-z8">
+      <mat-card-header fxLayoutGap="10px" fxLayoutAlign="start center">
+        <p class="mat-title">LOG/LOS</p>
+        <p class="mat-body-1">Last Scheduled time</p>
+      </mat-card-header>
+      <mat-card-content>
+
+        <mat-form-field>
+          <input matInput [matDatepicker]="logPicker" placeholder="Choose a date">
+          <mat-datepicker-toggle matSuffix [for]="logPicker"></mat-datepicker-toggle>
+          <mat-datepicker #logPicker></mat-datepicker>
+        </mat-form-field>
+
+
+        <div fxLayout="row" fxLayoutGap="15px">
+          <mat-radio-group fxLayoutGap="15px">
+            <mat-radio-button value="1">Full</mat-radio-button>
+            <mat-radio-button value="2">Update Only</mat-radio-button>
+          </mat-radio-group>
+
+          <button mat-raised-button color="primary">Download Trips</button>
+          <button mat-raised-button color="primary">Schedule History</button>
+          <button mat-raised-button color="primary" (click)="openLogSettingDialog()">Setting</button>
+        </div>
+
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="mat-elevation-z8">
+      <mat-card-header fxLayoutGap="10px" fxLayoutAlign="start center">
+        <p class="mat-title">Sentry</p>
+        <p class="mat-body-1">Last Scheduled time</p>
+      </mat-card-header>
+      <mat-card-content>
+
+        <mat-form-field>
+          <input matInput [matDatepicker]="sentryPicker" placeholder="Choose a date">
+          <mat-datepicker-toggle matSuffix [for]="sentryPicker"></mat-datepicker-toggle>
+          <mat-datepicker #sentryPicker></mat-datepicker>
+        </mat-form-field>
+
+
+        <div fxLayout="row" fxLayoutGap="15px">
+          <mat-radio-group fxLayoutGap="15px">
+            <mat-radio-button value="1">Full</mat-radio-button>
+            <mat-radio-button value="2">Update Only</mat-radio-button>
+          </mat-radio-group>
+
+          <button mat-raised-button color="primary">Download Trips</button>
+          <button mat-raised-button color="primary">Schedule History</button>
+          <button mat-raised-button color="primary" (click)="openSentrySettingDialog()">Setting</button>
+        </div>
+
+      </mat-card-content>
+    </mat-card>
 </div>

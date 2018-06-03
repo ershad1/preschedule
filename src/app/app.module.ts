@@ -10,6 +10,7 @@ import { MasSettingDialogComponent } from './pre-schedule-download/dialog/mas-se
 import { LogSettingDialogComponent } from './pre-schedule-download/dialog/log-setting-dialog/log-setting-dialog.component';
 import { SentrySettingDialogComponent } from './pre-schedule-download/dialog/sentry-setting-dialog/sentry-setting-dialog.component';
 import {FormsModule} from '@angular/forms';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -24,12 +25,15 @@ import {FormsModule} from '@angular/forms';
     FormsModule,
     NgbModule.forRoot(),
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent],
   entryComponents:[
-    MasSettingDialogComponent
+    MasSettingDialogComponent,
+    LogSettingDialogComponent,
+    SentrySettingDialogComponent
   ]
 })
 export class AppModule { }

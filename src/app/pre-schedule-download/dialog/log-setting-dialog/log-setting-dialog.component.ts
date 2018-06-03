@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./log-setting-dialog.component.css']
 })
 export class LogSettingDialogComponent implements OnInit {
+  value = '';
 
   constructor() { }
 
